@@ -4,10 +4,10 @@
     --surface-hover: #f1f5f9;
     --text-primary: #1e293b;
     --text-secondary: #64748b;
-    --accent-primary: #3b82f6;
-    --accent-secondary: #8b5cf6;
-    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-    --accent-glow: 0 0 40px rgba(59, 130, 246, 0.2);
+    --accent-primary: #00C300;
+    --accent-secondary: #009e00;
+    --accent-gradient: linear-gradient(135deg, #00C300 0%, #009e00 100%);
+    --accent-glow: 0 0 40px rgba(0, 195, 0, 0.2);
     --border-color: #e2e8f0;
     --font-main: 'Outfit', 'Noto Sans JP', sans-serif;
     --container-width: 1200px;
@@ -34,7 +34,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     line-height: 1.4;
     font-weight: 700;
     letter-spacing: 0.02em;
@@ -131,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 195, 0, 0.3);
 }
 
 .btn-secondary {
@@ -151,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     padding-top: var(--header-height);
-    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(0, 195, 0, 0.05) 0%, rgba(255, 255, 255, 0) 70%);
 }
 
 .hero-container {
@@ -279,7 +284,7 @@ h1, h2, h3, h4, h5, h6 {
 .solution-number {
     font-size: 4rem;
     font-weight: 700;
-    color: rgba(59, 130, 246, 0.1);
+    color: rgba(0, 195, 0, 0.1);
     line-height: 1;
     display: block;
     margin-bottom: -20px;
@@ -356,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .comparison-table th.highlight,
 .comparison-table td.highlight {
-    background: rgba(59, 130, 246, 0.05);
+    background: rgba(0, 195, 0, 0.05);
     color: var(--accent-primary);
     font-weight: 700;
 }
@@ -552,4 +557,14 @@ h1, h2, h3, h4, h5, h6 {
     .sp-only {
         display: block;
     }
+}
+
+.line-brand {
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+.no-break {
+    white-space: nowrap;
+    display: inline-block;
 }
