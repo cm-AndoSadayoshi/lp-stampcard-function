@@ -17,4 +17,21 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(element => {
         revealObserver.observe(element);
     });
+
+    // デモボタンのスマートフォン対応
+    const demoButton = document.querySelector('.hero-cta a');
+    if (demoButton) {
+        demoButton.addEventListener('click', (e) => {
+            // スマートフォン判定（画面幅768px以下またはタッチデバイス）
+            const isMobile = window.innerWidth <= 768 ||
+                           ('ontouchstart' in window) ||
+                           (navigator.maxTouchPoints > 0);
+
+            if (isMobile) {
+                e.preventDefault();
+                window.location.href = 'https://prototype-stampcard-function.vercel.app/mini/home';
+            }
+            // PCの場合はデフォルトのhref（/demo/home）に遷移
+        });
+    }
 });
